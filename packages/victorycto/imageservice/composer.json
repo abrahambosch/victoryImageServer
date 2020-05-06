@@ -1,0 +1,45 @@
+{
+    "name": "victorycto/imageservice",
+    "description": ":package_description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "Abraham Bosch",
+            "email": "abrahambosch@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/victorycto/imageservice",
+    "keywords": ["Laravel", "imageservice"],
+    "require": {
+        "illuminate/support": "~5|~6|~7",
+        "intervention/image": "^2.5",
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "league/flysystem": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3|~4",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "victorycto\\imageservice\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "victorycto\\imageservice\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "victorycto\\imageservice\\imageserviceServiceProvider"
+            ],
+            "aliases": {
+                "imageservice": "victorycto\\imageservice\\Facades\\imageservice"
+            }
+        }
+    }
+}
